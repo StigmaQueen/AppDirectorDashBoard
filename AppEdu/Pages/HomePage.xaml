@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppEdu.Pages.HomePage"
+             Title="Bienvenido director">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="btnLogOut" Text="Cerrar sesión" Clicked="btnLogOut_Clicked" IconImageSource="logout.png"/>
+    </ContentPage.ToolbarItems>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <ImageButton Grid.Row="1" Grid.Column="0" Margin="30"  x:Name="btnDocentes" Source="escritorio.png" Clicked="btnDocentes_ClickedAsync"/>
+        <Label HorizontalOptions="Center" Grid.Row="2">Docentes</Label>
+        
+        <ImageButton Source="equipo.png" Grid.Row="3" Grid.Column="0" Margin="30"  x:Name="btnGrupos"  Clicked="btnGrupos_ClickedAsync"/>
+         <Label HorizontalOptions="Center" Grid.Row="4">Asignar Grupos</Label>
+        
+        <ImageButton Source="libros.png" Grid.Row="5" Grid.Column="0" Margin="30"  x:Name="btnAsignaturas" Clicked="btnAsignaturasAsync_ClickedAsync"/>
+        <Label Grid.Row="7" HorizontalOptions="Center" >Asignar materias esp.</Label>
+        
+        <ImageButton Source="ceo.png" Grid.Row="1" Grid.Column="1" Margin="30"  x:Name="btnDirector" Clicked="btnDirector_ClickedAsync"/>
+       <Label Grid.Row="2" HorizontalOptions="Center" Grid.Column="2"> Mi Perfil </Label>
+        
+        <ImageButton Source="notas.png" Grid.Row="3" Grid.Column="1" Margin="30" x:Name="btnNotas"  Clicked="btnNotas_ClickedAsync"/>
+        <Label Grid.Row="4" HorizontalOptions="Center" Grid.Column="1">Notas de alumnos</Label>
+        
+        <ImageButton Source="calendario.png"  Grid.Row="5" Grid.Column="1" Margin="30"  x:Name="btnCalendario"  Clicked="btnCalendario_Clicked"/>
+        <Label HorizontalOptions="Center" Grid.Column="1" Grid.Row="7">Calendario escolar</Label>
+    </Grid>
+
+</ContentPage>

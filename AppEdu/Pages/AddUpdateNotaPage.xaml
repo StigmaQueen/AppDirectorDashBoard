@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppEdu.Pages.AddUpdateNotaPage"
+             xmlns:local="clr-namespace:AppEdu.ViewModels.NotasVM"
+             Title="AddUpdateNotaPage">
+    <VerticalStackLayout Padding="10">
+        <Label FontSize="Title" Margin="0,10,0,50" Text="Nueva nota"/>
+        
+        <Entry x:Name="etyId" Placeholder="Id" Text="{Binding NotasInfo.id, Mode=TwoWay}"  IsEnabled="False" IsVisible="false"/>
+
+        <Label Margin="0,15,0,0" Text="Titulo"/>
+        <Entry x:Name="etyTit" Placeholder="Titulo" Text="{Binding NotasInfo.titulo, Mode=TwoWay}"/>
+
+        <Label Margin="0,15,0,0" Text="Alumno"/>
+        <Picker x:Name="pckAlumno"/>
+
+        <Label Margin="0,15,0,0" Text="Descripción"/>
+        <Entry x:Name="etyDesc" Placeholder="Descripción" Text="{Binding NotasInfo.descripcion, Mode=TwoWay}"/>
+
+        
+       
+
+        <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="Center" Margin="0,20,0,0">
+            <Button x:Name="btnCancelar" WidthRequest="150" Text="Cancelar" Clicked="btnCancelar_ClickedAsync"/>
+            <Button x:Name="btnAddUpdateNota" WidthRequest="150" Text="Agregar" Command="{Binding GuardarNotaCommand}" Clicked="btnAddUpdateNota_Clicked"/>
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>
